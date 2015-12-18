@@ -105,6 +105,12 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNomenclature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNomenclature.Designer.cs">
+      <DependentUpon>FormNomenclature.cs</DependentUpon>
+    </Compile>
     <Compile Include="Nomenclature.cs" />
     <Compile Include="OrderedGoods.cs" />
     <Compile Include="Program.cs" />
@@ -123,6 +129,9 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormNomenclature.resx">
+      <DependentUpon>FormNomenclature.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -134,6 +143,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

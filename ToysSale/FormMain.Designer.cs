@@ -117,6 +117,7 @@
             this.tsmManageNomenclature.Name = "tsmManageNomenclature";
             this.tsmManageNomenclature.Size = new System.Drawing.Size(248, 22);
             this.tsmManageNomenclature.Text = "Управление номенклатурой";
+            this.tsmManageNomenclature.Click += new System.EventHandler(this.tsmManageNomenclature_Click);
             // 
             // FormMain
             // 

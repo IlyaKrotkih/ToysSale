@@ -18,9 +18,6 @@ namespace ToysSale
         private MongoClient client;
         private string ConnString;
         private SelectionMade SetDB;
-        public FormState State;
-        private List<string> ListDB;
-
 
         public FormConnect(SelectionMade setDB)
         {
@@ -83,17 +80,6 @@ namespace ToysSale
             }
         }
 
-        private void FormConnect_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
-            if (State != FormState.NeedClose)
-            {
-                e.Cancel = true;
-                this.Hide();
-                this.State = FormState.Hided;
-            }
-        }
-
         private async void GetDBNames(MongoClient client)
         {
             try
@@ -111,12 +97,5 @@ namespace ToysSale
                 MessageBox.Show(ex.ToString(), "Ошибка!");
             }
         }
-    }
-
-    public enum FormState
-    {
-        Hided,
-        Opened,
-        NeedClose
     }
 }

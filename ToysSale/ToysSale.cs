@@ -9,6 +9,14 @@ namespace ToysSale
 {
     public delegate void SelectionMade(object obj);
 
+    public interface IControlBD
+    {
+        void Add();
+        void Update(object o);
+        void Remove(object o);
+        IEnumerable<object> GetList();
+    }
+
     class ToysSale
     {
         public static IMongoDatabase dbToySale;

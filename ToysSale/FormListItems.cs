@@ -13,16 +13,14 @@ namespace ToysSale
 
     public partial class FormListItems : Form
     {
-        private ManageMethod Create, Change, Remove;
+        private IControlBD control;
         IEnumerable<object> List;
 
-        public FormListItems(IEnumerable<object> lst, ManageMethod createMethod,ManageMethod updateMethod,ManageMethod removeMethod)
+        public FormListItems(IControlBD ControlClass)
         {
             InitializeComponent();
-            this.Create = createMethod;
-            this.Change = updateMethod;
-            this.Remove = removeMethod;
-            List = lst;
+            control = ControlClass;
+            List = ControlClass.GetList();
             UpdateList(List);
         }
 
@@ -38,22 +36,22 @@ namespace ToysSale
         private void btnDelete_Click(object sender, EventArgs e)
         {
             object s = lstItems.SelectedItem;
-            Remove(s);
-            UpdateList(List);
+            control.Remove(s);
+            UpdateList(control.GetList());
         }
 
         private void btnChange_Click(object sender, EventArgs e)
         {
             object s = lstItems.SelectedItem;
-            Change(s);
-            UpdateList(List);
+            control.Update(s);
+            UpdateList(control.GetList());
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
             object s = lstItems.SelectedItem;
-            Create(s);
-            UpdateList(List);
+            control.Add();
+            UpdateList(control.GetList());
         }
 
         private void btnClose_Click(object sender, EventArgs e)
