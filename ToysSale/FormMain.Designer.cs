@@ -83,6 +83,7 @@
             this.tsmManageStaff.Name = "tsmManageStaff";
             this.tsmManageStaff.Size = new System.Drawing.Size(248, 22);
             this.tsmManageStaff.Text = "Управление персоналом";
+            this.tsmManageStaff.Click += new System.EventHandler(this.tsmManageStaff_Click);
             // 
             // tsmManageClients
             // 

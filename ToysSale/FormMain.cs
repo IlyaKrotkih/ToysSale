@@ -71,5 +71,10 @@ namespace ToysSale
             form.MdiParent = this;
             form.Show();
         }
+
+        private void tsmManageStaff_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

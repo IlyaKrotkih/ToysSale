@@ -13,6 +13,11 @@ namespace ToysSale
         public ObjectId Id { get; set; }
         public string Name { get; set; }
         public string Definition { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 
     public class ControlNomenclature: IControlBD

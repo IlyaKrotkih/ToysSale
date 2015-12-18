@@ -40,7 +40,7 @@
             // 
             // btnDisconnect
             // 
-            this.btnDisconnect.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.btnDisconnect.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDisconnect.Location = new System.Drawing.Point(12, 254);
             this.btnDisconnect.Name = "btnDisconnect";
@@ -52,7 +52,7 @@
             // 
             // btnConnect
             // 
-            this.btnConnect.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.btnConnect.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnConnect.Location = new System.Drawing.Point(12, 231);
             this.btnConnect.Name = "btnConnect";
@@ -64,8 +64,8 @@
             // 
             // lstBD
             // 
-            this.lstBD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.lstBD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lstBD.FormattingEnabled = true;
             this.lstBD.Location = new System.Drawing.Point(13, 47);
@@ -75,6 +75,8 @@
             // 
             // txtAddres
             // 
+            this.txtAddres.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAddres.Location = new System.Drawing.Point(12, 21);
             this.txtAddres.Name = "txtAddres";
             this.txtAddres.Size = new System.Drawing.Size(144, 20);
@@ -83,6 +85,7 @@
             // 
             // btnGetList
             // 
+            this.btnGetList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGetList.Location = new System.Drawing.Point(164, 19);
             this.btnGetList.Name = "btnGetList";
             this.btnGetList.Size = new System.Drawing.Size(45, 23);
@@ -102,6 +105,8 @@
             // 
             // txtNewCollection
             // 
+            this.txtNewCollection.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNewCollection.Location = new System.Drawing.Point(13, 205);
             this.txtNewCollection.Name = "txtNewCollection";
             this.txtNewCollection.Size = new System.Drawing.Size(196, 20);
@@ -109,6 +114,7 @@
             // 
             // chkNewCollection
             // 
+            this.chkNewCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.chkNewCollection.AutoSize = true;
             this.chkNewCollection.Location = new System.Drawing.Point(13, 188);
             this.chkNewCollection.Name = "chkNewCollection";
@@ -136,6 +142,7 @@
             this.Text = "Подключение";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
