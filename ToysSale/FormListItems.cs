@@ -31,27 +31,51 @@ namespace ToysSale
             {
                 lstItems.Items.Add(o);
             }
+            if (lstItems.Items.Count > 0)
+                lstItems.SelectedIndex = 0;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            object s = lstItems.SelectedItem;
-            control.Remove(s);
-            UpdateList(control.GetList());
+            try
+            {
+                object s = lstItems.SelectedItem;
+                control.Remove(s);
+                UpdateList(control.GetList());
+            }
+            catch
+            {
+                MessageBox.Show("Запись не удалена");
+                return;
+            }
         }
 
         private void btnChange_Click(object sender, EventArgs e)
         {
+            try { 
             object s = lstItems.SelectedItem;
             control.Update(s);
             UpdateList(control.GetList());
+            }
+            catch
+            {
+                MessageBox.Show("Запись не изменена");
+                return;
+            }
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            object s = lstItems.SelectedItem;
-            control.Add();
-            UpdateList(control.GetList());
+            try
+            {
+                control.Add();
+                UpdateList(control.GetList());
+            }
+            catch
+            {
+                MessageBox.Show("Запись не создана");
+                return;
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)

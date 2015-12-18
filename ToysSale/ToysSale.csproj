@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client.cs" />
+    <Compile Include="Department.cs" />
     <Compile Include="ExistingGoods.cs" />
     <Compile Include="FormChoice.cs">
       <SubType>Form</SubType>
@@ -92,6 +93,12 @@
     </Compile>
     <Compile Include="FormConnect.designer.cs">
       <DependentUpon>FormConnect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDepartment.Designer.cs">
+      <DependentUpon>FormDepartment.cs</DependentUpon>
     </Compile>
     <Compile Include="FormListItems.cs">
       <SubType>Form</SubType>
@@ -111,17 +118,27 @@
     <Compile Include="FormNomenclature.Designer.cs">
       <DependentUpon>FormNomenclature.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff.Designer.cs">
+      <DependentUpon>FormStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="Nomenclature.cs" />
     <Compile Include="OrderedGoods.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sale.cs" />
+    <Compile Include="Staff.cs" />
     <Compile Include="ToysSale.cs" />
     <EmbeddedResource Include="FormChoice.resx">
       <DependentUpon>FormChoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConnect.resx">
       <DependentUpon>FormConnect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDepartment.resx">
+      <DependentUpon>FormDepartment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormListItems.resx">
       <DependentUpon>FormListItems.cs</DependentUpon>
@@ -131,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNomenclature.resx">
       <DependentUpon>FormNomenclature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff.resx">
+      <DependentUpon>FormStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

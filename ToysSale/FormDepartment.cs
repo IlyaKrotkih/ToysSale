@@ -10,19 +10,18 @@ using System.Windows.Forms;
 
 namespace ToysSale
 {
-    public partial class FormNomenclature : Form
+    public partial class FormDepartment : Form
     {
-        private Nomenclature CurrentNomenclature;
+        Department CurrentDepartment;
 
-        public FormNomenclature(Nomenclature nomenclature)
+        public FormDepartment(Department department)
         {
             InitializeComponent();
             try
             {
-                this.CurrentNomenclature = nomenclature;
-                if (nomenclature.ToString() != null)this.Text = nomenclature.ToString();
-                txtName.Text = CurrentNomenclature.Name;
-                txtDefinition.Text = CurrentNomenclature.Definition;
+                CurrentDepartment = department;
+                if (CurrentDepartment.ToString() != null) this.Text = CurrentDepartment.ToString();
+                this.txtName.Text = CurrentDepartment.Name;
             }
             catch (Exception ex)
             {
@@ -35,8 +34,7 @@ namespace ToysSale
         {
             try
             {
-                CurrentNomenclature.Name = txtName.Text.ToString();
-                CurrentNomenclature.Definition = txtDefinition.Text.ToString();
+                CurrentDepartment.Name = txtName.Text.ToString();
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }

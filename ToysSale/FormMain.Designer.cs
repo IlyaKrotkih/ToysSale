@@ -31,13 +31,14 @@
             this.msMainMenu = new System.Windows.Forms.MenuStrip();
             this.tsmSaleManage = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmMagasineManage = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmManageGoods = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmManageStaff = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmManageClients = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmManageNomenclature = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmManageDepartment = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmManageStaff = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmManageSupply = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmManageGoods = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmExit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmSetUpConnection = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmManageNomenclature = new System.Windows.Forms.ToolStripMenuItem();
             this.msMainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +66,7 @@
             this.tsmMagasineManage.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmManageClients,
             this.tsmManageNomenclature,
+            this.tsmManageDepartment,
             this.tsmManageStaff,
             this.tsmManageSupply,
             this.tsmManageGoods});
@@ -72,30 +74,44 @@
             this.tsmMagasineManage.Size = new System.Drawing.Size(149, 20);
             this.tsmMagasineManage.Text = "Управление магазином";
             // 
-            // tsmManageGoods
+            // tsmManageClients
             // 
-            this.tsmManageGoods.Name = "tsmManageGoods";
-            this.tsmManageGoods.Size = new System.Drawing.Size(248, 22);
-            this.tsmManageGoods.Text = "Управление товаром";
+            this.tsmManageClients.Name = "tsmManageClients";
+            this.tsmManageClients.Size = new System.Drawing.Size(255, 22);
+            this.tsmManageClients.Text = "Управление клиентами";
+            // 
+            // tsmManageNomenclature
+            // 
+            this.tsmManageNomenclature.Name = "tsmManageNomenclature";
+            this.tsmManageNomenclature.Size = new System.Drawing.Size(255, 22);
+            this.tsmManageNomenclature.Text = "Управление номенклатурой";
+            this.tsmManageNomenclature.Click += new System.EventHandler(this.tsmManageNomenclature_Click);
+            // 
+            // tsmManageDepartment
+            // 
+            this.tsmManageDepartment.Name = "tsmManageDepartment";
+            this.tsmManageDepartment.Size = new System.Drawing.Size(255, 22);
+            this.tsmManageDepartment.Text = "Управление отделами компании";
+            this.tsmManageDepartment.Click += new System.EventHandler(this.tsmManageDepartment_Click);
             // 
             // tsmManageStaff
             // 
             this.tsmManageStaff.Name = "tsmManageStaff";
-            this.tsmManageStaff.Size = new System.Drawing.Size(248, 22);
+            this.tsmManageStaff.Size = new System.Drawing.Size(255, 22);
             this.tsmManageStaff.Text = "Управление персоналом";
             this.tsmManageStaff.Click += new System.EventHandler(this.tsmManageStaff_Click);
-            // 
-            // tsmManageClients
-            // 
-            this.tsmManageClients.Name = "tsmManageClients";
-            this.tsmManageClients.Size = new System.Drawing.Size(248, 22);
-            this.tsmManageClients.Text = "Управление клиентами";
             // 
             // tsmManageSupply
             // 
             this.tsmManageSupply.Name = "tsmManageSupply";
-            this.tsmManageSupply.Size = new System.Drawing.Size(248, 22);
+            this.tsmManageSupply.Size = new System.Drawing.Size(255, 22);
             this.tsmManageSupply.Text = "Управление поставками товара";
+            // 
+            // tsmManageGoods
+            // 
+            this.tsmManageGoods.Name = "tsmManageGoods";
+            this.tsmManageGoods.Size = new System.Drawing.Size(255, 22);
+            this.tsmManageGoods.Text = "Управление товаром";
             // 
             // tsmExit
             // 
@@ -112,13 +128,6 @@
             this.tsmSetUpConnection.Size = new System.Drawing.Size(157, 20);
             this.tsmSetUpConnection.Text = "Настройка подключения";
             this.tsmSetUpConnection.Click += new System.EventHandler(this.tsmSetUpConnection_Click);
-            // 
-            // tsmManageNomenclature
-            // 
-            this.tsmManageNomenclature.Name = "tsmManageNomenclature";
-            this.tsmManageNomenclature.Size = new System.Drawing.Size(248, 22);
-            this.tsmManageNomenclature.Text = "Управление номенклатурой";
-            this.tsmManageNomenclature.Click += new System.EventHandler(this.tsmManageNomenclature_Click);
             // 
             // FormMain
             // 
@@ -151,6 +160,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmManageClients;
         private System.Windows.Forms.ToolStripMenuItem tsmManageSupply;
         private System.Windows.Forms.ToolStripMenuItem tsmManageNomenclature;
+        private System.Windows.Forms.ToolStripMenuItem tsmManageDepartment;
     }
 }
 

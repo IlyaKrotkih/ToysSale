@@ -74,7 +74,19 @@ namespace ToysSale
 
         private void tsmManageStaff_Click(object sender, EventArgs e)
         {
+            ControlStaff control = new ControlStaff(ToysSale.dbToySale);
+            FormListItems form = new FormListItems(control);
+            form.MdiParent = this;
+            form.Show();
 
+        }
+
+        private void tsmManageDepartment_Click(object sender, EventArgs e)
+        {
+            ControlDepartment control = new ControlDepartment(ToysSale.dbToySale);
+            FormListItems form = new FormListItems(control);
+            form.MdiParent = this;
+            form.Show();
         }
     }
 }
