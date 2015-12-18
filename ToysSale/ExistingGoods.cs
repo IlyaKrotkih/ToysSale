@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using MongoDB.Driver;
 using MongoDB.Bson;
 
 namespace ToysSale
 {
-    class Client
+    class ExistingGoods
     {
         public ObjectId Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Patronumic { get; set; }
+        public Nomenclature GoodsNomenclature { get; set; }
+        public decimal price { get; set; }
+        public int count { get; set; }
     }
 }
