@@ -17,11 +17,15 @@ namespace ToysSale
         public int Count { get; set; }
         public DateTime DateDeparture { get; set; }
         public DateTime DateRecive { get; set; }
+        public bool IsComplite { get; set; }
 
         public override string ToString()
         {
             if (GoodsNomenclature != null)
-                return "Поставка от " + DateDeparture.Date.ToShortDateString() + ", " + GoodsNomenclature.ToString();
+            {
+                if (IsComplite == true) return "Поставка от " + DateDeparture.Date.ToShortDateString() + ", " + GoodsNomenclature.ToString() + " (оприходована)";
+                else return "Поставка от " + DateDeparture.Date.ToShortDateString() + ", " + GoodsNomenclature.ToString();
+            }
             else
                 return "Поставка от " + DateDeparture.Date.ToShortDateString();
         }
@@ -30,7 +34,7 @@ namespace ToysSale
     public class ControlOrderedGoods : IControlBD
     {
         IMongoDatabase Database;
-        IMongoCollection<OrderedGoods> collection;
+        public IMongoCollection<OrderedGoods> collection;
 
         public ControlOrderedGoods(IMongoDatabase database)
         {
@@ -42,6 +46,7 @@ namespace ToysSale
         {
             OrderedGoods og = new OrderedGoods();
             og.DateDeparture = og.DateRecive = DateTime.Now;
+            og.IsComplite = false;
             FormOrderedGoods frm = new FormOrderedGoods(og);
             frm.ShowDialog();
             if (frm.DialogResult == System.Windows.Forms.DialogResult.OK)

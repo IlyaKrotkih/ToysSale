@@ -64,10 +64,15 @@ namespace ToysSale
             e.Cancel = false;
         }
 
+        private void tsmExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void tsmManageNomenclature_Click(object sender, EventArgs e)
         {
             ControlNomenclature control = new ControlNomenclature(ToysSale.dbToySale);
-            FormListItems form = new FormListItems(control,"Номенклатура");
+            FormListItems form = new FormListItems(control, "Номенклатура");
             form.MdiParent = this;
             form.Show();
         }
@@ -78,7 +83,6 @@ namespace ToysSale
             FormListItems form = new FormListItems(control, "Персонал");
             form.MdiParent = this;
             form.Show();
-
         }
 
         private void tsmManageDepartment_Click(object sender, EventArgs e)
@@ -96,5 +100,34 @@ namespace ToysSale
             form.MdiParent = this;
             form.Show();
         }
+
+        private void tsmManageClients_Click(object sender, EventArgs e)
+        {
+            ControlClient control = new ControlClient(ToysSale.dbToySale);
+            FormListItems form = new FormListItems(control, "Клиенты");
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void tsmManageGoods_Click(object sender, EventArgs e)
+        {
+            ControlExistingGoods control = new ControlExistingGoods(ToysSale.dbToySale);
+            FormListItems form = new FormListItems(control, "Товар в магазине");
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void tsmDebitGoods_Click(object sender, EventArgs e)
+        {
+            ControlExistingGoods control = new ControlExistingGoods(ToysSale.dbToySale);
+            try
+            {
+                MessageBox.Show(control.DebetOrderedGoods(), "Выполнено.");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Ошибка.");
+            }
+            }
     }
 }

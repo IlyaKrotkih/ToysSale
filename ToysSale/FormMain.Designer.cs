@@ -39,6 +39,7 @@
             this.tsmManageGoods = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmExit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmSetUpConnection = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmDebitGoods = new System.Windows.Forms.ToolStripMenuItem();
             this.msMainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,7 +70,8 @@
             this.tsmManageDepartment,
             this.tsmManageStaff,
             this.tsmManageSupply,
-            this.tsmManageGoods});
+            this.tsmManageGoods,
+            this.tsmDebitGoods});
             this.tsmMagasineManage.Name = "tsmMagasineManage";
             this.tsmMagasineManage.Size = new System.Drawing.Size(149, 20);
             this.tsmMagasineManage.Text = "Управление магазином";
@@ -77,42 +79,44 @@
             // tsmManageClients
             // 
             this.tsmManageClients.Name = "tsmManageClients";
-            this.tsmManageClients.Size = new System.Drawing.Size(255, 22);
+            this.tsmManageClients.Size = new System.Drawing.Size(258, 22);
             this.tsmManageClients.Text = "Управление клиентами";
+            this.tsmManageClients.Click += new System.EventHandler(this.tsmManageClients_Click);
             // 
             // tsmManageNomenclature
             // 
             this.tsmManageNomenclature.Name = "tsmManageNomenclature";
-            this.tsmManageNomenclature.Size = new System.Drawing.Size(255, 22);
+            this.tsmManageNomenclature.Size = new System.Drawing.Size(258, 22);
             this.tsmManageNomenclature.Text = "Управление номенклатурой";
             this.tsmManageNomenclature.Click += new System.EventHandler(this.tsmManageNomenclature_Click);
             // 
             // tsmManageDepartment
             // 
             this.tsmManageDepartment.Name = "tsmManageDepartment";
-            this.tsmManageDepartment.Size = new System.Drawing.Size(255, 22);
+            this.tsmManageDepartment.Size = new System.Drawing.Size(258, 22);
             this.tsmManageDepartment.Text = "Управление отделами компании";
             this.tsmManageDepartment.Click += new System.EventHandler(this.tsmManageDepartment_Click);
             // 
             // tsmManageStaff
             // 
             this.tsmManageStaff.Name = "tsmManageStaff";
-            this.tsmManageStaff.Size = new System.Drawing.Size(255, 22);
+            this.tsmManageStaff.Size = new System.Drawing.Size(258, 22);
             this.tsmManageStaff.Text = "Управление персоналом";
             this.tsmManageStaff.Click += new System.EventHandler(this.tsmManageStaff_Click);
             // 
             // tsmManageSupply
             // 
             this.tsmManageSupply.Name = "tsmManageSupply";
-            this.tsmManageSupply.Size = new System.Drawing.Size(255, 22);
+            this.tsmManageSupply.Size = new System.Drawing.Size(258, 22);
             this.tsmManageSupply.Text = "Управление поставками товара";
             this.tsmManageSupply.Click += new System.EventHandler(this.tsmManageSupply_Click);
             // 
             // tsmManageGoods
             // 
             this.tsmManageGoods.Name = "tsmManageGoods";
-            this.tsmManageGoods.Size = new System.Drawing.Size(255, 22);
+            this.tsmManageGoods.Size = new System.Drawing.Size(258, 22);
             this.tsmManageGoods.Text = "Управление товаром";
+            this.tsmManageGoods.Click += new System.EventHandler(this.tsmManageGoods_Click);
             // 
             // tsmExit
             // 
@@ -121,6 +125,7 @@
             this.tsmExit.Name = "tsmExit";
             this.tsmExit.Size = new System.Drawing.Size(53, 20);
             this.tsmExit.Text = "Выход";
+            this.tsmExit.Click += new System.EventHandler(this.tsmExit_Click);
             // 
             // tsmSetUpConnection
             // 
@@ -129,6 +134,13 @@
             this.tsmSetUpConnection.Size = new System.Drawing.Size(157, 20);
             this.tsmSetUpConnection.Text = "Настройка подключения";
             this.tsmSetUpConnection.Click += new System.EventHandler(this.tsmSetUpConnection_Click);
+            // 
+            // tsmDebitGoods
+            // 
+            this.tsmDebitGoods.Name = "tsmDebitGoods";
+            this.tsmDebitGoods.Size = new System.Drawing.Size(258, 22);
+            this.tsmDebitGoods.Text = "Ориходовать поступивший товар";
+            this.tsmDebitGoods.Click += new System.EventHandler(this.tsmDebitGoods_Click);
             // 
             // FormMain
             // 
@@ -162,6 +174,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmManageSupply;
         private System.Windows.Forms.ToolStripMenuItem tsmManageNomenclature;
         private System.Windows.Forms.ToolStripMenuItem tsmManageDepartment;
+        private System.Windows.Forms.ToolStripMenuItem tsmDebitGoods;
     }
 }
 

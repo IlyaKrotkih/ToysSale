@@ -88,6 +88,12 @@
     <Compile Include="FormChoice.designer.cs">
       <DependentUpon>FormChoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClient.Designer.cs">
+      <DependentUpon>FormClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConnect.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,12 @@
     </Compile>
     <Compile Include="FormDepartment.Designer.cs">
       <DependentUpon>FormDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGoods.Designer.cs">
+      <DependentUpon>FormGoods.cs</DependentUpon>
     </Compile>
     <Compile Include="FormListItems.cs">
       <SubType>Form</SubType>
@@ -140,11 +152,17 @@
     <EmbeddedResource Include="FormChoice.resx">
       <DependentUpon>FormChoice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormClient.resx">
+      <DependentUpon>FormClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormConnect.resx">
       <DependentUpon>FormConnect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDepartment.resx">
       <DependentUpon>FormDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGoods.resx">
+      <DependentUpon>FormGoods.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormListItems.resx">
       <DependentUpon>FormListItems.cs</DependentUpon>
