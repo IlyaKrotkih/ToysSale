@@ -8,12 +8,74 @@ using MongoDB.Bson;
 
 namespace ToysSale
 {
-    class OrderedGoods
+    public class OrderedGoods
     {
         public ObjectId Id { get; set; }
         public Nomenclature GoodsNomenclature { get; set; }
-        public decimal price { get; set; }
+        public decimal RetailPrice { get; set; }
         public decimal WhosalePrice { get; set; }
-        public int count { get; set; }
+        public int Count { get; set; }
+        public DateTime DateDeparture { get; set; }
+        public DateTime DateRecive { get; set; }
+
+        public override string ToString()
+        {
+            if (GoodsNomenclature != null)
+                return "Поставка от " + DateDeparture.Date.ToShortDateString() + ", " + GoodsNomenclature.ToString();
+            else
+                return "Поставка от " + DateDeparture.Date.ToShortDateString();
+        }
+    }
+
+    public class ControlOrderedGoods : IControlBD
+    {
+        IMongoDatabase Database;
+        IMongoCollection<OrderedGoods> collection;
+
+        public ControlOrderedGoods(IMongoDatabase database)
+        {
+            this.Database = database;
+            collection = Database.GetCollection<OrderedGoods>("OrderedGoods");
+        }
+
+        public void Add()
+        {
+            OrderedGoods og = new OrderedGoods();
+            og.DateDeparture = og.DateRecive = DateTime.Now;
+            FormOrderedGoods frm = new FormOrderedGoods(og);
+            frm.ShowDialog();
+            if (frm.DialogResult == System.Windows.Forms.DialogResult.OK)
+            {
+                collection.InsertOne(og);
+            }
+        }
+        public void Remove(object o)
+        {
+            OrderedGoods og = (OrderedGoods)o;
+            collection.DeleteOne<OrderedGoods>(i1 => i1.Id == og.Id);
+        }
+        public void Update(object o)
+        {
+            OrderedGoods og = (OrderedGoods)o;
+            FormOrderedGoods frm = new FormOrderedGoods(og);
+            frm.ShowDialog();
+            if (frm.DialogResult == System.Windows.Forms.DialogResult.OK)
+            {
+                collection.ReplaceOne<OrderedGoods>(i1 => i1.Id == og.Id, og);
+            }
+        }
+        public IEnumerable<object> GetList()
+        {
+            var filter = new BsonDocument();
+            IEnumerable<OrderedGoods> list = collection.Find(filter).ToEnumerable();
+            return list;
+        }
+
+        public IEnumerable<object> GetList(BsonDocument Filter)
+        {
+            var filter = Filter;
+            IEnumerable<OrderedGoods> list = collection.Find(filter).ToEnumerable();
+            return list;
+        }
     }
 }

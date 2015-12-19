@@ -106,6 +106,7 @@
             this.tsmManageSupply.Name = "tsmManageSupply";
             this.tsmManageSupply.Size = new System.Drawing.Size(255, 22);
             this.tsmManageSupply.Text = "Управление поставками товара";
+            this.tsmManageSupply.Click += new System.EventHandler(this.tsmManageSupply_Click);
             // 
             // tsmManageGoods
             // 

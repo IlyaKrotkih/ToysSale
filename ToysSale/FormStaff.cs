@@ -24,11 +24,17 @@ namespace ToysSale
                 txtLastName.Text    = CurrentStaff.LastName;
                 txtPatronunic.Text  = CurrentStaff.Patronumic;
                 if (CurrentStaff.StaffDepartment != null)
-                    btnDepartment.Text  = CurrentStaff.StaffDepartment.ToString();
+                {
+                    CurrentStaffDepartment = CurrentStaff.StaffDepartment;
+                    btnDepartment.Text = CurrentStaff.StaffDepartment.ToString();
+                }
                 txtPosition.Text    = CurrentStaff.Position;
                 numSalary.Value     = CurrentStaff.salary;
                 dtAppyToWork.Value  = CurrentStaff.DateApplyToWork;
-                if (CurrentStaff.ToString() != null) this.Text = CurrentStaff.ToString();
+                if (CurrentStaff.ToString().Trim(new char[] { ' ' }) == "" || CurrentStaff.ToString() == null)
+                    this.Text = "Регистрация рабочего";
+                else
+                    this.Text = CurrentStaff.ToString();
 
             }
             catch (Exception ex)

@@ -16,11 +16,12 @@ namespace ToysSale
         private IControlBD control;
         IEnumerable<object> List;
 
-        public FormListItems(IControlBD ControlClass)
+        public FormListItems(IControlBD ControlClass, string WindowText)
         {
             InitializeComponent();
             control = ControlClass;
             List = ControlClass.GetList();
+            this.Text = WindowText;
             UpdateList(List);
         }
 

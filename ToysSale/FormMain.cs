@@ -67,7 +67,7 @@ namespace ToysSale
         private void tsmManageNomenclature_Click(object sender, EventArgs e)
         {
             ControlNomenclature control = new ControlNomenclature(ToysSale.dbToySale);
-            FormListItems form = new FormListItems(control);
+            FormListItems form = new FormListItems(control,"Номенклатура");
             form.MdiParent = this;
             form.Show();
         }
@@ -75,7 +75,7 @@ namespace ToysSale
         private void tsmManageStaff_Click(object sender, EventArgs e)
         {
             ControlStaff control = new ControlStaff(ToysSale.dbToySale);
-            FormListItems form = new FormListItems(control);
+            FormListItems form = new FormListItems(control, "Персонал");
             form.MdiParent = this;
             form.Show();
 
@@ -84,7 +84,15 @@ namespace ToysSale
         private void tsmManageDepartment_Click(object sender, EventArgs e)
         {
             ControlDepartment control = new ControlDepartment(ToysSale.dbToySale);
-            FormListItems form = new FormListItems(control);
+            FormListItems form = new FormListItems(control, "Подразделение компании");
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void tsmManageSupply_Click(object sender, EventArgs e)
+        {
+            ControlOrderedGoods control = new ControlOrderedGoods(ToysSale.dbToySale);
+            FormListItems form = new FormListItems(control, "Поставки");
             form.MdiParent = this;
             form.Show();
         }

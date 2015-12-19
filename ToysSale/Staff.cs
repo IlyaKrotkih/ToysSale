@@ -33,7 +33,7 @@ namespace ToysSale
         public ControlStaff(IMongoDatabase database)
         {
             this.Database = database;
-            collection = Database.GetCollection<Staff>("Nomenclature");
+            collection = Database.GetCollection<Staff>("Staff");
         }
 
         public void Add()
