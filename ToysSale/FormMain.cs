@@ -143,5 +143,13 @@ namespace ToysSale
                 form.Show();
             }
         }
+
+        private void tsmManagediscount_Click(object sender, EventArgs e)
+        {
+            ControlDiscount control = new ControlDiscount(ToysSale.dbToySale);
+            FormListItems form = new FormListItems(control, "Скидки");
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

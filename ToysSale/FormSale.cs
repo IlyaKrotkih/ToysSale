@@ -16,6 +16,7 @@ namespace ToysSale
         Sale CurrentSale;
         Client CurrentClient;
         List<BasketItem> ListSale;
+        List<Discount> ListDiscount;
 
 
         public FormSale(Sale sale , bool ReadOnly)
@@ -26,10 +27,15 @@ namespace ToysSale
                 CurrentSale = sale;
                 if (CurrentSale.Basket != null) ListSale = CurrentSale.Basket;
                 else ListSale = new List<BasketItem>();
+                if (CurrentSale.Discounts != null) ListDiscount = CurrentSale.Discounts;
+                else ListDiscount = new List<Discount>();
                 CurrentClient = CurrentSale.SaleClient;
-                txtStaff.Text = CurrentSale.ResponsibleStaff.ToString();
                 if (CurrentClient != null) txtClient.Text = CurrentClient.ToString();
-                this.btnAddGoods.Enabled = this.btnCreateSale.Enabled = this.btnDeleteGoods.Enabled = !ReadOnly;
+                txtStaff.Text = CurrentSale.ResponsibleStaff.ToString();
+                UpdateLstdiscount();
+                txtSumm.Text = CurrentSale.SummGoods.ToString();
+                this.btnAddGoods.Enabled = this.btnCreateSale.Enabled = this.btnDeleteGoods.Enabled 
+                    = btnAddDiscount.Enabled = btnDeleteDiscount.Enabled = !ReadOnly;
                 if (CurrentSale.ToString().Trim(new char[] { ' ' }) == "" || CurrentSale.ToString() == null)
                     this.Text = "Корзина";
                 else
@@ -42,6 +48,14 @@ namespace ToysSale
             }
         }
 
+        private void UpdateSumm()
+        {
+            CurrentSale.Basket = ListSale;
+            CurrentSale.Discounts = ListDiscount;
+            CurrentSale.SetPrice();
+            txtSumm.Text = CurrentSale.SummGoods.ToString();
+        }
+
         private void UpdateDgv()
         {
             dgvGoods.Rows.Clear();
@@ -49,7 +63,15 @@ namespace ToysSale
             {
                 
                dgvGoods.Rows.Add(new object[] { ce, ce.Count, ce.Available, ce.Price });
-               txtSumm.Text = ListSale.Sum<BasketItem>(i1 => i1.Price*i1.Count).ToString();
+            }
+        }
+
+        private void UpdateLstdiscount()
+        {
+            lstDiscount.Items.Clear();
+            foreach (Discount d in ListDiscount)
+            {
+                lstDiscount.Items.Add(d);
             }
         }
 
@@ -90,11 +112,19 @@ namespace ToysSale
 
         private void btnCreateSale_Click(object sender, EventArgs e)
         {
-            CurrentSale.SaleClient = this.CurrentClient;
-            CurrentSale.Basket = this.ListSale;
-            CurrentSale.SaleDate = DateTime.Now;
-            CurrentSale.SummGoods = ListSale.Sum<BasketItem>(i1 => i1.Price*i1.Count);
-            this.DialogResult = DialogResult.OK;
+            try
+            {
+                CurrentSale.SaleClient = this.CurrentClient;
+                CurrentSale.Basket = this.ListSale;
+                CurrentSale.SaleDate = DateTime.Now;
+                UpdateSumm();
+                this.DialogResult = DialogResult.OK;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Ошибка.");
+                return;
+            }
         }
 
         private void btnAddGoods_Click(object sender, EventArgs e)
@@ -105,6 +135,7 @@ namespace ToysSale
             if (frm.DialogResult == DialogResult.OK)
             {
                 UpdateDgv();
+                UpdateSumm();
             }
         }
 
@@ -116,6 +147,7 @@ namespace ToysSale
                 BasketItem sel = (BasketItem)dgvGoods.Rows[RowIndex].Cells["clGood"].Value;
                 ListSale.Remove(sel);
                 UpdateDgv();
+                UpdateSumm();
             }
             catch
             {
@@ -139,10 +171,28 @@ namespace ToysSale
             int RowIndex = dgvGoods.CurrentCell.RowIndex;
             BasketItem sel = (BasketItem)dgvGoods.Rows[RowIndex].Cells["clGood"].Value;
             int count = Convert.ToInt32(dgvGoods.Rows[RowIndex].Cells["clCount"].Value);
-            sel.Count = count;
+            sel.SetCount(count);
             dgvGoods.Rows[RowIndex].Cells["clCount"].Value = sel.Count;
-            CurrentSale.SummGoods = ListSale.Sum<BasketItem>(i1 => i1.Price * i1.Count);
-            txtSumm.Text = CurrentSale.SummGoods.ToString();
+            UpdateSumm();
+        }
+
+        private void btnDeleteDiscount_Click(object sender, EventArgs e)
+        {
+            if (lstDiscount.SelectedItem != null)
+            {
+                ListDiscount.Remove((Discount)lstDiscount.SelectedItem);
+            }
+            UpdateSumm();
+            UpdateLstdiscount();
+        }
+
+        private void btnAddDiscount_Click(object sender, EventArgs e)
+        {
+            ControlDiscount control = new ControlDiscount(ToysSale.dbToySale);
+            FormChoice frm = new FormChoice(control.GetList(), i1 => { ListDiscount.Add((Discount)i1); });
+            frm.ShowDialog();
+            UpdateSumm();
+            UpdateLstdiscount();
         }
     }
 }

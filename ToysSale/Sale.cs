@@ -15,11 +15,34 @@ namespace ToysSale
         public Client SaleClient { get; set; }
         public decimal SummGoods { get; set; }
         public List<BasketItem> Basket { get; set; }
+        public List<Discount> Discounts { get; set; }
         public DateTime SaleDate { get; set; }
 
         public override string ToString()
         {
             return "Покупка от: " + SaleDate.ToString() + ", на сумму: " + SummGoods.ToString();
+        }
+
+        public void SetPrice()
+        {
+            decimal p = 0;
+            if (Basket != null)
+            {
+                p = Basket.Sum(i1 => i1.Price * Convert.ToDecimal(i1.Count));
+            }
+            if(Discounts!=null)
+                {
+                decimal disc = Discounts.Sum(i1 => i1.DiscountValue);
+                if (disc < Convert.ToDecimal(0.5))
+                {
+                    p -= p * disc;
+                }
+                else
+                {
+                    p -= p * Convert.ToDecimal(0.5);
+                }
+                SummGoods = p;
+            }
         }
     }
 
@@ -50,7 +73,6 @@ namespace ToysSale
             if (frm.DialogResult == System.Windows.Forms.DialogResult.OK && s.SummGoods > 0)
             {
                 collection.InsertOne(s);
-
                 ControlExistingGoods controlEG = new ControlExistingGoods(ToysSale.dbToySale);
                 List<ExistingGoods> ListEG = controlEG.GetList()
                     .Select<object, ExistingGoods>(i1 => (ExistingGoods)i1)

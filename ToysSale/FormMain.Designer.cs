@@ -37,9 +37,10 @@
             this.tsmManageStaff = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmManageSupply = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmManageGoods = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmDebitGoods = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmExit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmSetUpConnection = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmDebitGoods = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmManagediscount = new System.Windows.Forms.ToolStripMenuItem();
             this.msMainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,13 +67,14 @@
             // tsmMagasineManage
             // 
             this.tsmMagasineManage.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmDebitGoods,
             this.tsmManageClients,
             this.tsmManageNomenclature,
             this.tsmManageDepartment,
             this.tsmManageStaff,
             this.tsmManageSupply,
-            this.tsmManageGoods,
-            this.tsmDebitGoods});
+            this.tsmManagediscount,
+            this.tsmManageGoods});
             this.tsmMagasineManage.Name = "tsmMagasineManage";
             this.tsmMagasineManage.Size = new System.Drawing.Size(149, 20);
             this.tsmMagasineManage.Text = "Управление магазином";
@@ -119,6 +121,13 @@
             this.tsmManageGoods.Text = "Управление товаром";
             this.tsmManageGoods.Click += new System.EventHandler(this.tsmManageGoods_Click);
             // 
+            // tsmDebitGoods
+            // 
+            this.tsmDebitGoods.Name = "tsmDebitGoods";
+            this.tsmDebitGoods.Size = new System.Drawing.Size(258, 22);
+            this.tsmDebitGoods.Text = "Ориходовать поступивший товар";
+            this.tsmDebitGoods.Click += new System.EventHandler(this.tsmDebitGoods_Click);
+            // 
             // tsmExit
             // 
             this.tsmExit.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
@@ -136,12 +145,12 @@
             this.tsmSetUpConnection.Text = "Настройка подключения";
             this.tsmSetUpConnection.Click += new System.EventHandler(this.tsmSetUpConnection_Click);
             // 
-            // tsmDebitGoods
+            // tsmManagediscount
             // 
-            this.tsmDebitGoods.Name = "tsmDebitGoods";
-            this.tsmDebitGoods.Size = new System.Drawing.Size(258, 22);
-            this.tsmDebitGoods.Text = "Ориходовать поступивший товар";
-            this.tsmDebitGoods.Click += new System.EventHandler(this.tsmDebitGoods_Click);
+            this.tsmManagediscount.Name = "tsmManagediscount";
+            this.tsmManagediscount.Size = new System.Drawing.Size(258, 22);
+            this.tsmManagediscount.Text = "Управление скидками";
+            this.tsmManagediscount.Click += new System.EventHandler(this.tsmManagediscount_Click);
             // 
             // FormMain
             // 
@@ -176,6 +185,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmManageNomenclature;
         private System.Windows.Forms.ToolStripMenuItem tsmManageDepartment;
         private System.Windows.Forms.ToolStripMenuItem tsmDebitGoods;
+        private System.Windows.Forms.ToolStripMenuItem tsmManagediscount;
     }
 }
 

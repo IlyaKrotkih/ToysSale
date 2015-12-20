@@ -44,7 +44,14 @@
             this.txtSumm = new System.Windows.Forms.TextBox();
             this.txtStaff = new System.Windows.Forms.TextBox();
             this.lblStaff = new System.Windows.Forms.Label();
+            this.grbBasket = new System.Windows.Forms.GroupBox();
+            this.grpDiscount = new System.Windows.Forms.GroupBox();
+            this.btnDeleteDiscount = new System.Windows.Forms.Button();
+            this.btnAddDiscount = new System.Windows.Forms.Button();
+            this.lstDiscount = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGoods)).BeginInit();
+            this.grbBasket.SuspendLayout();
+            this.grpDiscount.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblClient
@@ -94,14 +101,14 @@
             this.clExisting,
             this.clPrice});
             this.dgvGoods.EnableHeadersVisualStyles = false;
-            this.dgvGoods.Location = new System.Drawing.Point(16, 67);
+            this.dgvGoods.Location = new System.Drawing.Point(6, 15);
             this.dgvGoods.MultiSelect = false;
             this.dgvGoods.Name = "dgvGoods";
             this.dgvGoods.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvGoods.RowHeadersWidth = 20;
             this.dgvGoods.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvGoods.ShowEditingIcon = false;
-            this.dgvGoods.Size = new System.Drawing.Size(463, 189);
+            this.dgvGoods.Size = new System.Drawing.Size(456, 118);
             this.dgvGoods.TabIndex = 3;
             this.dgvGoods.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGoods_CellEndEdit);
             // 
@@ -135,10 +142,10 @@
             // 
             // btnCancell
             // 
-            this.btnCancell.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCancell.Location = new System.Drawing.Point(16, 288);
+            this.btnCancell.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancell.Location = new System.Drawing.Point(253, 347);
             this.btnCancell.Name = "btnCancell";
-            this.btnCancell.Size = new System.Drawing.Size(97, 23);
+            this.btnCancell.Size = new System.Drawing.Size(107, 23);
             this.btnCancell.TabIndex = 4;
             this.btnCancell.Text = "Отмена";
             this.btnCancell.UseVisualStyleBackColor = true;
@@ -147,9 +154,9 @@
             // btnAddGoods
             // 
             this.btnAddGoods.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddGoods.Location = new System.Drawing.Point(180, 288);
+            this.btnAddGoods.Location = new System.Drawing.Point(242, 139);
             this.btnAddGoods.Name = "btnAddGoods";
-            this.btnAddGoods.Size = new System.Drawing.Size(97, 23);
+            this.btnAddGoods.Size = new System.Drawing.Size(107, 23);
             this.btnAddGoods.TabIndex = 4;
             this.btnAddGoods.Text = "Добавить товар";
             this.btnAddGoods.UseVisualStyleBackColor = true;
@@ -158,9 +165,9 @@
             // btnDeleteGoods
             // 
             this.btnDeleteGoods.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteGoods.Location = new System.Drawing.Point(283, 288);
+            this.btnDeleteGoods.Location = new System.Drawing.Point(355, 139);
             this.btnDeleteGoods.Name = "btnDeleteGoods";
-            this.btnDeleteGoods.Size = new System.Drawing.Size(97, 23);
+            this.btnDeleteGoods.Size = new System.Drawing.Size(107, 23);
             this.btnDeleteGoods.TabIndex = 4;
             this.btnDeleteGoods.Text = "Удалить товар";
             this.btnDeleteGoods.UseVisualStyleBackColor = true;
@@ -169,9 +176,9 @@
             // btnCreateSale
             // 
             this.btnCreateSale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCreateSale.Location = new System.Drawing.Point(386, 288);
+            this.btnCreateSale.Location = new System.Drawing.Point(366, 347);
             this.btnCreateSale.Name = "btnCreateSale";
-            this.btnCreateSale.Size = new System.Drawing.Size(93, 23);
+            this.btnCreateSale.Size = new System.Drawing.Size(107, 23);
             this.btnCreateSale.TabIndex = 4;
             this.btnCreateSale.Text = "Оформить заказ";
             this.btnCreateSale.UseVisualStyleBackColor = true;
@@ -179,9 +186,9 @@
             // 
             // lblSumm
             // 
-            this.lblSumm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSumm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblSumm.AutoSize = true;
-            this.lblSumm.Location = new System.Drawing.Point(281, 265);
+            this.lblSumm.Location = new System.Drawing.Point(13, 352);
             this.lblSumm.Name = "lblSumm";
             this.lblSumm.Size = new System.Drawing.Size(41, 13);
             this.lblSumm.TabIndex = 5;
@@ -189,11 +196,11 @@
             // 
             // txtSumm
             // 
-            this.txtSumm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSumm.Location = new System.Drawing.Point(328, 262);
+            this.txtSumm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtSumm.Location = new System.Drawing.Point(60, 349);
             this.txtSumm.Name = "txtSumm";
             this.txtSumm.ReadOnly = true;
-            this.txtSumm.Size = new System.Drawing.Size(151, 20);
+            this.txtSumm.Size = new System.Drawing.Size(153, 20);
             this.txtSumm.TabIndex = 6;
             // 
             // txtStaff
@@ -213,20 +220,80 @@
             this.lblStaff.TabIndex = 8;
             this.lblStaff.Text = "Сотрудник";
             // 
+            // grbBasket
+            // 
+            this.grbBasket.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grbBasket.Controls.Add(this.dgvGoods);
+            this.grbBasket.Controls.Add(this.btnAddGoods);
+            this.grbBasket.Controls.Add(this.btnDeleteGoods);
+            this.grbBasket.Location = new System.Drawing.Point(11, 66);
+            this.grbBasket.Name = "grbBasket";
+            this.grbBasket.Size = new System.Drawing.Size(468, 168);
+            this.grbBasket.TabIndex = 9;
+            this.grbBasket.TabStop = false;
+            this.grbBasket.Text = "Корзина";
+            // 
+            // grpDiscount
+            // 
+            this.grpDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpDiscount.Controls.Add(this.lstDiscount);
+            this.grpDiscount.Controls.Add(this.btnDeleteDiscount);
+            this.grpDiscount.Controls.Add(this.btnAddDiscount);
+            this.grpDiscount.Location = new System.Drawing.Point(11, 240);
+            this.grpDiscount.Name = "grpDiscount";
+            this.grpDiscount.Size = new System.Drawing.Size(468, 101);
+            this.grpDiscount.TabIndex = 10;
+            this.grpDiscount.TabStop = false;
+            this.grpDiscount.Text = "Скидки";
+            // 
+            // btnDeleteDiscount
+            // 
+            this.btnDeleteDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteDiscount.Location = new System.Drawing.Point(355, 72);
+            this.btnDeleteDiscount.Name = "btnDeleteDiscount";
+            this.btnDeleteDiscount.Size = new System.Drawing.Size(107, 23);
+            this.btnDeleteDiscount.TabIndex = 4;
+            this.btnDeleteDiscount.Text = "Удалить скидку";
+            this.btnDeleteDiscount.UseVisualStyleBackColor = true;
+            this.btnDeleteDiscount.Click += new System.EventHandler(this.btnDeleteDiscount_Click);
+            // 
+            // btnAddDiscount
+            // 
+            this.btnAddDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddDiscount.Location = new System.Drawing.Point(242, 72);
+            this.btnAddDiscount.Name = "btnAddDiscount";
+            this.btnAddDiscount.Size = new System.Drawing.Size(107, 23);
+            this.btnAddDiscount.TabIndex = 4;
+            this.btnAddDiscount.Text = "Добавить скидку";
+            this.btnAddDiscount.UseVisualStyleBackColor = true;
+            this.btnAddDiscount.Click += new System.EventHandler(this.btnAddDiscount_Click);
+            // 
+            // lstDiscount
+            // 
+            this.lstDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lstDiscount.Location = new System.Drawing.Point(6, 14);
+            this.lstDiscount.Name = "lstDiscount";
+            this.lstDiscount.Size = new System.Drawing.Size(456, 56);
+            this.lstDiscount.TabIndex = 5;
+            // 
             // FormSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 323);
+            this.ClientSize = new System.Drawing.Size(491, 382);
+            this.Controls.Add(this.grpDiscount);
+            this.Controls.Add(this.grbBasket);
             this.Controls.Add(this.lblStaff);
             this.Controls.Add(this.txtStaff);
             this.Controls.Add(this.txtSumm);
             this.Controls.Add(this.lblSumm);
             this.Controls.Add(this.btnCreateSale);
-            this.Controls.Add(this.btnDeleteGoods);
-            this.Controls.Add(this.btnAddGoods);
             this.Controls.Add(this.btnCancell);
-            this.Controls.Add(this.dgvGoods);
             this.Controls.Add(this.btnSelClient);
             this.Controls.Add(this.txtClient);
             this.Controls.Add(this.lblClient);
@@ -235,6 +302,8 @@
             this.Text = "Корзина";
             this.Load += new System.EventHandler(this.FormManageSales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGoods)).EndInit();
+            this.grbBasket.ResumeLayout(false);
+            this.grpDiscount.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,5 +327,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clPrice;
         private System.Windows.Forms.TextBox txtStaff;
         private System.Windows.Forms.Label lblStaff;
+        private System.Windows.Forms.GroupBox grbBasket;
+        private System.Windows.Forms.GroupBox grpDiscount;
+        private System.Windows.Forms.Button btnDeleteDiscount;
+        private System.Windows.Forms.Button btnAddDiscount;
+        private System.Windows.Forms.ListBox lstDiscount;
     }
 }
