@@ -83,5 +83,15 @@ namespace ToysSale
         {
             this.Close();
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            UpdateList(control.GetList());
+        }
+
+        private void lstItems_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            btnChange_Click(this, null);
+        }
     }
 }

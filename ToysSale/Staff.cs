@@ -21,7 +21,7 @@ namespace ToysSale
 
         public override string ToString()
         {
-            return LastName + " " + FirstName + " " + Patronumic;
+            return LastName + " " + FirstName + " " + Patronumic + " (" + Position + ")";
         }
     }
 

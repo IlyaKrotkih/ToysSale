@@ -124,10 +124,24 @@ namespace ToysSale
             {
                 MessageBox.Show(control.DebetOrderedGoods(), "Выполнено.");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Ошибка.");
             }
+        }
+
+        private void tsmSaleManage_Click(object sender, EventArgs e)
+        {
+            ControlSale control = new ControlSale(ToysSale.dbToySale);
+            ControlStaff controlstaff = new ControlStaff(ToysSale.dbToySale);
+            FormChoice frm = new FormChoice(controlstaff.GetList(), control.SetStaff, "Выберите работника!");
+            frm.ShowDialog();
+            if (frm.DialogResult == DialogResult.OK)
+            {
+                FormListItems form = new FormListItems(control, "Продажи");
+                form.MdiParent = this;
+                form.Show();
             }
+        }
     }
 }

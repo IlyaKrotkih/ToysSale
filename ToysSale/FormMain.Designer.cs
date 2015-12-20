@@ -61,6 +61,7 @@
             this.tsmSaleManage.Name = "tsmSaleManage";
             this.tsmSaleManage.Size = new System.Drawing.Size(142, 20);
             this.tsmSaleManage.Text = "Упавление покупками";
+            this.tsmSaleManage.Click += new System.EventHandler(this.tsmSaleManage_Click);
             // 
             // tsmMagasineManage
             // 

@@ -22,6 +22,14 @@ namespace ToysSale
             Func = func;
         }
 
+        public FormChoice(IEnumerable<object> items, SelectionMade func,string WindowText)
+        {
+            InitializeComponent();
+            Items = items;
+            Func = func;
+            this.Text = WindowText;
+        }
+
         private void ToList(IEnumerable<object> items)
         {
             lstList.Items.Clear();

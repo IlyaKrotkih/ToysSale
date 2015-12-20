@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="NameAndType">
+  <Class Name="ToysSale.BasketItem">
+    <Position X="35.25" Y="7.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAIAAAEAAAAAARAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>BasketItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysSale.Client">
+    <Position X="32.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAAAAAEAAAAAAAAAAAAAAIAAAAAAAAAAIg=</HashCode>
+      <FileName>Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysSale.ControlClient" BaseTypeListCollapsed="true">
+    <Position X="23.75" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAEAAAAAAAEAABAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Client.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ToysSale.Department">
+    <Position X="32.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAEAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Department.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysSale.ControlDepartment" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="6.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAEAAAAAAAEAABAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Department.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ToysSale.ExistingGoods">
+    <Position X="35.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AEADAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExistingGoods.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysSale.ControlExistingGoods" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAEAAAAAAAEAABAAAAAAAAAAAABAAAAAAAAI=</HashCode>
+      <FileName>ExistingGoods.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ToysSale.FormChoice">
+    <Position X="9.75" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAIAAACAACASAAACAAAACAAAADAAAABgBAAAAAAA=</HashCode>
+      <FileName>FormChoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysSale.FormClient">
+    <Position X="3.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAECAgAAAAAACBAAoCAABAgBAQAAACACIAACA=</HashCode>
+      <FileName>FormClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysSale.FormConnect">
+    <Position X="6.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>BAAACAAAACAAAJKAAACQCGACQAAAABAAEIAABAAgBBA=</HashCode>
+      <FileName>FormConnect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysSale.FormDepartment">
+    <Position X="13" Y="7.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACAAAAAAAACAAAACAAAAQBAAAIAAAAIAACQ=</HashCode>
+      <FileName>FormDepartment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysSale.FormGoods">
+    <Position X="3.5" Y="5.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAQABAACAQABEAAACAAEACAEAAABEgAAAAEAIAACk=</HashCode>
+      <FileName>FormGoods.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysSale.FormListItems">
+    <Position X="6.5" Y="6.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAQDAIAAQGAAAACAAAAQASABIAAAAAAAQY=</HashCode>
+      <FileName>FormListItems.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysSale.FormMain">
+    <Position X="9.5" Y="5.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>BAAowkAgACAAACAAAACgIIBCAAIABCAhBAAAIkIAEAA=</HashCode>
+      <FileName>FormMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysSale.FormNomenclature">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAIAgCAAAAAAAACAAAACAEAAQBAAAIAAAAIAACQ=</HashCode>
+      <FileName>FormNomenclature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysSale.FormOrderedGoods">
+    <Position X="0.5" Y="5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAQABAoCAQAAAAAACkAAQCAEAAQBEgAIAEkAIAACA=</HashCode>
+      <FileName>FormOrderedGoods.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysSale.FormSale">
+    <Position X="16.25" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAMUACFAGiEACwAAAACCgAACCghAwBAQgAgAACAAAAQ=</HashCode>
+      <FileName>FormSale.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysSale.FormStaff">
+    <Position X="13" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AACAAAQAECAAAEAAAoGBAAgCAAlABJIAAAACgDIAQCA=</HashCode>
+      <FileName>FormStaff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysSale.Nomenclature">
+    <Position X="34.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAACAAEAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Nomenclature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysSale.ControlNomenclature" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="3.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAEAAAAAAAEAABAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Nomenclature.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ToysSale.OrderedGoods">
+    <Position X="35.5" Y="4.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AEACAAAAAAAQAgAEAAAAAAQAAAAIAAAAIAEAAAAAAAA=</HashCode>
+      <FileName>OrderedGoods.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysSale.ControlOrderedGoods" BaseTypeListCollapsed="true">
+    <Position X="23.75" Y="3.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAEAAAAAAAEAABAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>OrderedGoods.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ToysSale.Program" Collapsed="true">
+    <Position X="17.5" Y="10.75" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysSale.Sale">
+    <Position X="32.5" Y="7.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAgAAAAgAAEABAAAAAAAAAAAAAAAAEAAAEAAAA=</HashCode>
+      <FileName>Sale.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysSale.ControlSale" BaseTypeListCollapsed="true">
+    <Position X="27.5" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAGAAAAAAAEAAJAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Sale.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ToysSale.Staff">
+    <Position X="32.5" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAgIAgkAAAAAAAAAAAAAAIAAAAAAAAAAAg=</HashCode>
+      <FileName>Staff.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysSale.ControlStaff" BaseTypeListCollapsed="true">
+    <Position X="23.75" Y="6.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAEAAAAAAAEAABAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Staff.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ToysSale.ToysSale">
+    <Position X="36" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ToysSale.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysSale.Properties.Resources" Collapsed="true">
+    <Position X="16" Y="10.75" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToysSale.Properties.Settings" Collapsed="true">
+    <Position X="19" Y="10.75" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ToysSale.IControlBD">
+    <Position X="16.25" Y="8.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>ToysSale.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Delegate Name="ToysSale.ManageMethod" Collapsed="true">
+    <Position X="22" Y="10.75" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FormListItems.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="ToysSale.SelectionMade" Collapsed="true">
+    <Position X="20.5" Y="10.75" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ToysSale.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

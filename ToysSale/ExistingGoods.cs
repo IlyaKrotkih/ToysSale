@@ -25,7 +25,7 @@ namespace ToysSale
     public class ControlExistingGoods : IControlBD
     {
         IMongoDatabase Database;
-        IMongoCollection<ExistingGoods> collection;
+        public IMongoCollection<ExistingGoods> collection;
 
         public ControlExistingGoods(IMongoDatabase database)
         {

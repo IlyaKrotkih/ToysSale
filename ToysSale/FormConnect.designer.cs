@@ -72,6 +72,7 @@
             this.lstBD.Name = "lstBD";
             this.lstBD.Size = new System.Drawing.Size(196, 134);
             this.lstBD.TabIndex = 2;
+            this.lstBD.DoubleClick += new System.EventHandler(this.lstBD_DoubleClick);
             // 
             // txtAddres
             // 

@@ -97,5 +97,12 @@ namespace ToysSale
                 MessageBox.Show(ex.ToString(), "Ошибка!");
             }
         }
+
+        private void lstBD_DoubleClick(object sender, EventArgs e)
+        {
+            if (lstBD.Items.Count == 0)
+                return;
+            btnConnect_Click(this, null);
+        }
     }
 }
