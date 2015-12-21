@@ -72,16 +72,14 @@ namespace ToysSale
             return list;
         }
 
-        public string DebetOrderedGoods()
+        private string Debet(IEnumerable<OrderedGoods> todebet, ControlOrderedGoods controldb)
         {
-            ControlOrderedGoods controlOrderedgoods = new ControlOrderedGoods(ToysSale.dbToySale);
-            IEnumerable<OrderedGoods> ListCompliteOrderedGoods = controlOrderedgoods.GetList()
-                .Select<object, OrderedGoods>(i1 => i1 as OrderedGoods)
-                .Where<OrderedGoods>(i1 => i1.DateRecive <= DateTime.Now && i1.IsComplite == false);
+            ControlOrderedGoods controlOrderedgoods = controldb;
+            IEnumerable<OrderedGoods> ToDebet = todebet;
             IEnumerable<ExistingGoods> ListExistingGoods = GetList().Select<object, ExistingGoods>(i1 => i1 as ExistingGoods);
             List<ExistingGoods> ListCompliteAdd = new List<ExistingGoods>();
             List<ExistingGoods> ListCompliteUpgate = new List<ExistingGoods>();
-            foreach (OrderedGoods og in ListCompliteOrderedGoods)
+            foreach (OrderedGoods og in ToDebet)
             {
                 ExistingGoods ex;
                 try { ex = ListExistingGoods.Single(i1 => i1.GoodsNomenclature.Id == og.GoodsNomenclature.Id); }
@@ -109,6 +107,27 @@ namespace ToysSale
                 controlOrderedgoods.collection.ReplaceOne<OrderedGoods>(i1 => i1.Id == og.Id, og);
             }
             return "Оприходовано:\n    " + ListCompliteAdd.Count.ToString() + " новых наименований;\n    " + ListCompliteUpgate.Count.ToString() + " имеюшихся наименований.";
+        }
+
+        public string QDebetOrderedGoods()
+        {
+            ControlOrderedGoods controlOrderedgoods = new ControlOrderedGoods(ToysSale.dbToySale);
+            IEnumerable<OrderedGoods> ListCompliteOrderedGoods = controlOrderedgoods.GetList()
+                .Select<object, OrderedGoods>(i1 => i1 as OrderedGoods)
+                .Where<OrderedGoods>(i1 => i1.DateRecive <= DateTime.Now && i1.IsComplite == false);
+            return Debet(ListCompliteOrderedGoods, controlOrderedgoods);
+        }
+
+        public string FormDebetOrderedGoods()
+        {
+            ControlOrderedGoods controlOrderedgoods = new ControlOrderedGoods(ToysSale.dbToySale);
+            IEnumerable<OrderedGoods> ListOrderedGoods = controlOrderedgoods.GetList()
+                .Select<object, OrderedGoods>(i1 => i1 as OrderedGoods)
+                .Where<OrderedGoods>(i1 => i1.IsComplite == false);
+            List<OrderedGoods> ListToDebetGoods = new List<OrderedGoods>();
+            FormDebetGoods frm = new FormDebetGoods(ListOrderedGoods, ListToDebetGoods);
+            frm.ShowDialog();
+            return Debet(ListOrderedGoods, controlOrderedgoods);
         }
     }
 }

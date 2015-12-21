@@ -31,22 +31,25 @@
             this.msMainMenu = new System.Windows.Forms.MenuStrip();
             this.tsmSaleManage = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmMagasineManage = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmQDebitGoods = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmManageClients = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmManageNomenclature = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmManageDepartment = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmManageStaff = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmManageSupply = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmManagediscount = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmManageGoods = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmDebitGoods = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmExit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmSetUpConnection = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmManagediscount = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmNewSale = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmDebitGoods = new System.Windows.Forms.ToolStripMenuItem();
             this.msMainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // msMainMenu
             // 
             this.msMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmNewSale,
             this.tsmSaleManage,
             this.tsmMagasineManage,
             this.tsmExit,
@@ -67,6 +70,7 @@
             // tsmMagasineManage
             // 
             this.tsmMagasineManage.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmQDebitGoods,
             this.tsmDebitGoods,
             this.tsmManageClients,
             this.tsmManageNomenclature,
@@ -79,54 +83,61 @@
             this.tsmMagasineManage.Size = new System.Drawing.Size(149, 20);
             this.tsmMagasineManage.Text = "Управление магазином";
             // 
+            // tsmQDebitGoods
+            // 
+            this.tsmQDebitGoods.Name = "tsmQDebitGoods";
+            this.tsmQDebitGoods.Size = new System.Drawing.Size(300, 22);
+            this.tsmQDebitGoods.Text = "Быстро ориходовать поступивший товар";
+            this.tsmQDebitGoods.Click += new System.EventHandler(this.tsmQDebitGoods_Click);
+            // 
             // tsmManageClients
             // 
             this.tsmManageClients.Name = "tsmManageClients";
-            this.tsmManageClients.Size = new System.Drawing.Size(258, 22);
+            this.tsmManageClients.Size = new System.Drawing.Size(300, 22);
             this.tsmManageClients.Text = "Управление клиентами";
             this.tsmManageClients.Click += new System.EventHandler(this.tsmManageClients_Click);
             // 
             // tsmManageNomenclature
             // 
             this.tsmManageNomenclature.Name = "tsmManageNomenclature";
-            this.tsmManageNomenclature.Size = new System.Drawing.Size(258, 22);
+            this.tsmManageNomenclature.Size = new System.Drawing.Size(300, 22);
             this.tsmManageNomenclature.Text = "Управление номенклатурой";
             this.tsmManageNomenclature.Click += new System.EventHandler(this.tsmManageNomenclature_Click);
             // 
             // tsmManageDepartment
             // 
             this.tsmManageDepartment.Name = "tsmManageDepartment";
-            this.tsmManageDepartment.Size = new System.Drawing.Size(258, 22);
+            this.tsmManageDepartment.Size = new System.Drawing.Size(300, 22);
             this.tsmManageDepartment.Text = "Управление отделами компании";
             this.tsmManageDepartment.Click += new System.EventHandler(this.tsmManageDepartment_Click);
             // 
             // tsmManageStaff
             // 
             this.tsmManageStaff.Name = "tsmManageStaff";
-            this.tsmManageStaff.Size = new System.Drawing.Size(258, 22);
+            this.tsmManageStaff.Size = new System.Drawing.Size(300, 22);
             this.tsmManageStaff.Text = "Управление персоналом";
             this.tsmManageStaff.Click += new System.EventHandler(this.tsmManageStaff_Click);
             // 
             // tsmManageSupply
             // 
             this.tsmManageSupply.Name = "tsmManageSupply";
-            this.tsmManageSupply.Size = new System.Drawing.Size(258, 22);
+            this.tsmManageSupply.Size = new System.Drawing.Size(300, 22);
             this.tsmManageSupply.Text = "Управление поставками товара";
             this.tsmManageSupply.Click += new System.EventHandler(this.tsmManageSupply_Click);
+            // 
+            // tsmManagediscount
+            // 
+            this.tsmManagediscount.Name = "tsmManagediscount";
+            this.tsmManagediscount.Size = new System.Drawing.Size(300, 22);
+            this.tsmManagediscount.Text = "Управление скидками";
+            this.tsmManagediscount.Click += new System.EventHandler(this.tsmManagediscount_Click);
             // 
             // tsmManageGoods
             // 
             this.tsmManageGoods.Name = "tsmManageGoods";
-            this.tsmManageGoods.Size = new System.Drawing.Size(258, 22);
+            this.tsmManageGoods.Size = new System.Drawing.Size(300, 22);
             this.tsmManageGoods.Text = "Управление товаром";
             this.tsmManageGoods.Click += new System.EventHandler(this.tsmManageGoods_Click);
-            // 
-            // tsmDebitGoods
-            // 
-            this.tsmDebitGoods.Name = "tsmDebitGoods";
-            this.tsmDebitGoods.Size = new System.Drawing.Size(258, 22);
-            this.tsmDebitGoods.Text = "Ориходовать поступивший товар";
-            this.tsmDebitGoods.Click += new System.EventHandler(this.tsmDebitGoods_Click);
             // 
             // tsmExit
             // 
@@ -145,12 +156,19 @@
             this.tsmSetUpConnection.Text = "Настройка подключения";
             this.tsmSetUpConnection.Click += new System.EventHandler(this.tsmSetUpConnection_Click);
             // 
-            // tsmManagediscount
+            // tsmNewSale
             // 
-            this.tsmManagediscount.Name = "tsmManagediscount";
-            this.tsmManagediscount.Size = new System.Drawing.Size(258, 22);
-            this.tsmManagediscount.Text = "Управление скидками";
-            this.tsmManagediscount.Click += new System.EventHandler(this.tsmManagediscount_Click);
+            this.tsmNewSale.Name = "tsmNewSale";
+            this.tsmNewSale.Size = new System.Drawing.Size(101, 20);
+            this.tsmNewSale.Text = "Новая покупка";
+            this.tsmNewSale.Click += new System.EventHandler(this.tsmNewSale_Click);
+            // 
+            // tsmDebitGoods
+            // 
+            this.tsmDebitGoods.Name = "tsmDebitGoods";
+            this.tsmDebitGoods.Size = new System.Drawing.Size(300, 22);
+            this.tsmDebitGoods.Text = "Оприходовать поступивший товар";
+            this.tsmDebitGoods.Click += new System.EventHandler(this.tsmDebitGoods_Click);
             // 
             // FormMain
             // 
@@ -184,8 +202,10 @@
         private System.Windows.Forms.ToolStripMenuItem tsmManageSupply;
         private System.Windows.Forms.ToolStripMenuItem tsmManageNomenclature;
         private System.Windows.Forms.ToolStripMenuItem tsmManageDepartment;
-        private System.Windows.Forms.ToolStripMenuItem tsmDebitGoods;
+        private System.Windows.Forms.ToolStripMenuItem tsmQDebitGoods;
         private System.Windows.Forms.ToolStripMenuItem tsmManagediscount;
+        private System.Windows.Forms.ToolStripMenuItem tsmNewSale;
+        private System.Windows.Forms.ToolStripMenuItem tsmDebitGoods;
     }
 }
 

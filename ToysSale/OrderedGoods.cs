@@ -57,7 +57,21 @@ namespace ToysSale
         public void Remove(object o)
         {
             OrderedGoods og = (OrderedGoods)o;
-            collection.DeleteOne<OrderedGoods>(i1 => i1.Id == og.Id);
+            if (og.IsComplite == true)
+            {
+                ControlExistingGoods controlEG = new ControlExistingGoods(ToysSale.dbToySale);
+                ExistingGoods eg = (ExistingGoods)controlEG.GetList().Single(i1 => ((ExistingGoods)i1).GoodsNomenclature.Id == og.GoodsNomenclature.Id);
+                if (eg != null && eg.count >= og.Count)
+                {
+                    eg.count -= og.Count;
+                    if (eg.count == 0)
+                        controlEG.Remove(eg);
+                    else
+                        controlEG.collection.ReplaceOne(i1 => i1.Id == eg.Id, eg);
+                    collection.DeleteOne<OrderedGoods>(i1 => i1.Id == og.Id);
+                }
+            }
+            else { collection.DeleteOne<OrderedGoods>(i1 => i1.Id == og.Id); }
         }
         public void Update(object o)
         {

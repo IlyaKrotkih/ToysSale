@@ -122,7 +122,7 @@ namespace ToysSale
             ControlExistingGoods control = new ControlExistingGoods(ToysSale.dbToySale);
             try
             {
-                MessageBox.Show(control.DebetOrderedGoods(), "Выполнено.");
+                MessageBox.Show(control.FormDebetOrderedGoods(), "Выполнено.");
             }
             catch (Exception ex)
             {
@@ -150,6 +150,38 @@ namespace ToysSale
             FormListItems form = new FormListItems(control, "Скидки");
             form.MdiParent = this;
             form.Show();
+        }
+
+        private void tsmNewSale_Click(object sender, EventArgs e)
+        {
+            ControlSale control = new ControlSale(ToysSale.dbToySale);
+            ControlStaff controlstaff = new ControlStaff(ToysSale.dbToySale);
+            FormChoice frm = new FormChoice(controlstaff.GetList(), control.SetStaff, "Выберите работника!");
+            frm.ShowDialog();
+            if (frm.DialogResult == DialogResult.OK)
+            {
+                try
+                {
+                    control.Add();
+                }
+                catch
+                {
+                    MessageBox.Show("Запись не создана!", "Ошибка.");
+                }
+            }
+        }
+
+        private void tsmQDebitGoods_Click(object sender, EventArgs e)
+        {
+            ControlExistingGoods control = new ControlExistingGoods(ToysSale.dbToySale);
+            try
+            {
+                MessageBox.Show(control.QDebetOrderedGoods(), "Выполнено.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Ошибка.");
+            }
         }
     }
 }

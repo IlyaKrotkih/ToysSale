@@ -102,6 +102,12 @@
     <Compile Include="FormConnect.designer.cs">
       <DependentUpon>FormConnect.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDebetGoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDebetGoods.Designer.cs">
+      <DependentUpon>FormDebetGoods.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDepartment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormConnect.resx">
       <DependentUpon>FormConnect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDebetGoods.resx">
+      <DependentUpon>FormDebetGoods.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDepartment.resx">
       <DependentUpon>FormDepartment.cs</DependentUpon>
