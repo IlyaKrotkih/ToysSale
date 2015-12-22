@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             this.msMainMenu = new System.Windows.Forms.MenuStrip();
+            this.tsmNewSale = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmSaleManage = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmMagasineManage = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmQDebitGoods = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmDebitGoods = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmManageClients = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmManageNomenclature = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmManageDepartment = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,8 +43,9 @@
             this.tsmManageGoods = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmExit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmSetUpConnection = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmNewSale = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmDebitGoods = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmReport = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmReportOfDeliveries = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmReportOfSales = new System.Windows.Forms.ToolStripMenuItem();
             this.msMainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,12 +56,20 @@
             this.tsmSaleManage,
             this.tsmMagasineManage,
             this.tsmExit,
-            this.tsmSetUpConnection});
+            this.tsmSetUpConnection,
+            this.tsmReport});
             this.msMainMenu.Location = new System.Drawing.Point(0, 0);
             this.msMainMenu.Name = "msMainMenu";
-            this.msMainMenu.Size = new System.Drawing.Size(610, 24);
+            this.msMainMenu.Size = new System.Drawing.Size(720, 24);
             this.msMainMenu.TabIndex = 2;
             this.msMainMenu.Text = "menuStrip1";
+            // 
+            // tsmNewSale
+            // 
+            this.tsmNewSale.Name = "tsmNewSale";
+            this.tsmNewSale.Size = new System.Drawing.Size(101, 20);
+            this.tsmNewSale.Text = "Новая покупка";
+            this.tsmNewSale.Click += new System.EventHandler(this.tsmNewSale_Click);
             // 
             // tsmSaleManage
             // 
@@ -89,6 +100,13 @@
             this.tsmQDebitGoods.Size = new System.Drawing.Size(300, 22);
             this.tsmQDebitGoods.Text = "Быстро ориходовать поступивший товар";
             this.tsmQDebitGoods.Click += new System.EventHandler(this.tsmQDebitGoods_Click);
+            // 
+            // tsmDebitGoods
+            // 
+            this.tsmDebitGoods.Name = "tsmDebitGoods";
+            this.tsmDebitGoods.Size = new System.Drawing.Size(300, 22);
+            this.tsmDebitGoods.Text = "Оприходовать поступивший товар";
+            this.tsmDebitGoods.Click += new System.EventHandler(this.tsmDebitGoods_Click);
             // 
             // tsmManageClients
             // 
@@ -156,25 +174,34 @@
             this.tsmSetUpConnection.Text = "Настройка подключения";
             this.tsmSetUpConnection.Click += new System.EventHandler(this.tsmSetUpConnection_Click);
             // 
-            // tsmNewSale
+            // tsmReport
             // 
-            this.tsmNewSale.Name = "tsmNewSale";
-            this.tsmNewSale.Size = new System.Drawing.Size(101, 20);
-            this.tsmNewSale.Text = "Новая покупка";
-            this.tsmNewSale.Click += new System.EventHandler(this.tsmNewSale_Click);
+            this.tsmReport.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmReportOfDeliveries,
+            this.tsmReportOfSales});
+            this.tsmReport.Name = "tsmReport";
+            this.tsmReport.Size = new System.Drawing.Size(60, 20);
+            this.tsmReport.Text = "Отчеты";
             // 
-            // tsmDebitGoods
+            // tsmReportOfDeliveries
             // 
-            this.tsmDebitGoods.Name = "tsmDebitGoods";
-            this.tsmDebitGoods.Size = new System.Drawing.Size(300, 22);
-            this.tsmDebitGoods.Text = "Оприходовать поступивший товар";
-            this.tsmDebitGoods.Click += new System.EventHandler(this.tsmDebitGoods_Click);
+            this.tsmReportOfDeliveries.Name = "tsmReportOfDeliveries";
+            this.tsmReportOfDeliveries.Size = new System.Drawing.Size(232, 22);
+            this.tsmReportOfDeliveries.Text = "Отчет о поставках на период";
+            this.tsmReportOfDeliveries.Click += new System.EventHandler(this.tsmReportOfDeliveries_Click);
+            // 
+            // tsmReportOfSales
+            // 
+            this.tsmReportOfSales.Name = "tsmReportOfSales";
+            this.tsmReportOfSales.Size = new System.Drawing.Size(232, 22);
+            this.tsmReportOfSales.Text = "Отчет о продажах на период";
+            this.tsmReportOfSales.Click += new System.EventHandler(this.tsmReportOfSales_Click);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 384);
+            this.ClientSize = new System.Drawing.Size(720, 384);
             this.Controls.Add(this.msMainMenu);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.msMainMenu;
@@ -206,6 +233,9 @@
         private System.Windows.Forms.ToolStripMenuItem tsmManagediscount;
         private System.Windows.Forms.ToolStripMenuItem tsmNewSale;
         private System.Windows.Forms.ToolStripMenuItem tsmDebitGoods;
+        private System.Windows.Forms.ToolStripMenuItem tsmReport;
+        private System.Windows.Forms.ToolStripMenuItem tsmReportOfDeliveries;
+        private System.Windows.Forms.ToolStripMenuItem tsmReportOfSales;
     }
 }
 

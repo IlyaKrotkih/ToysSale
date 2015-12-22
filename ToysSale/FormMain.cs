@@ -29,14 +29,14 @@ namespace ToysSale
                 ToysSale.dbToySale = o as IMongoDatabase;
                 ToysSale.ConnState = true;
                 this.tsmMagasineManage.Enabled =
-                tsmSaleManage.Enabled = true;
+                    tsmSaleManage.Enabled = tsmReport.Enabled = tsmNewSale.Enabled = false;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Ошибка.");
                 ToysSale.dbToySale = null;
                 ToysSale.ConnState = this.tsmMagasineManage.Enabled =
-                tsmSaleManage.Enabled = false;
+                    tsmSaleManage.Enabled = tsmReport.Enabled = tsmNewSale.Enabled = false;
                 this.Text = "Магазин игрушек (отключено)";
             }
             finally
@@ -45,7 +45,7 @@ namespace ToysSale
                 {
                     this.Text = "Магазин игрушек (отключено)";
                     ToysSale.ConnState = this.tsmMagasineManage.Enabled =
-                    tsmSaleManage.Enabled = false;
+                    tsmSaleManage.Enabled = tsmReport.Enabled = tsmNewSale.Enabled = false;
                 }
                 else
                     this.Text = "Подключен к " + ToysSale.dbToySale.DatabaseNamespace.ToString();
@@ -182,6 +182,22 @@ namespace ToysSale
             {
                 MessageBox.Show(ex.ToString(), "Ошибка.");
             }
+        }
+
+        private void tsmReportOfDeliveries_Click(object sender, EventArgs e)
+        {
+            ControlOrderedGoods control = new ControlOrderedGoods(ToysSale.dbToySale);
+            FormReportDelivery form = new FormReportDelivery(control);
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void tsmReportOfSales_Click(object sender, EventArgs e)
+        {
+            ControlSale control = new ControlSale(ToysSale.dbToySale);
+            FormReportSale form = new FormReportSale(control);
+            form.MdiParent = this;
+            form.Show();
         }
     }
 }

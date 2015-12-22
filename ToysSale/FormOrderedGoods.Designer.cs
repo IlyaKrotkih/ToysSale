@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.lblNomenclature = new System.Windows.Forms.Label();
             this.lblRetailPrice = new System.Windows.Forms.Label();
             this.lblWhosalePrice = new System.Windows.Forms.Label();
             this.lblCount = new System.Windows.Forms.Label();
             this.blDataDeparture = new System.Windows.Forms.Label();
             this.lblDateRecive = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.btnNomenclature = new System.Windows.Forms.Button();
             this.numRetailPrice = new System.Windows.Forms.NumericUpDown();
             this.numWhosalePrice = new System.Windows.Forms.NumericUpDown();
@@ -81,28 +81,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(284, 179);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnClose.Location = new System.Drawing.Point(3, 153);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(105, 23);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.Text = "Отмена";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSave.Location = new System.Drawing.Point(114, 153);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(167, 23);
-            this.btnSave.TabIndex = 0;
-            this.btnSave.Text = "Сохранить";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // lblNomenclature
             // 
@@ -169,6 +147,28 @@
             this.lblDateRecive.TabIndex = 1;
             this.lblDateRecive.Text = "Дата получения";
             this.lblDateRecive.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnClose.Location = new System.Drawing.Point(3, 153);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(105, 23);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.Text = "Отмена";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSave.Location = new System.Drawing.Point(114, 153);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(167, 23);
+            this.btnSave.TabIndex = 0;
+            this.btnSave.Text = "Сохранить";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnNomenclature
             // 
