@@ -29,7 +29,7 @@ namespace ToysSale
                 ToysSale.dbToySale = o as IMongoDatabase;
                 ToysSale.ConnState = true;
                 this.tsmMagasineManage.Enabled =
-                    tsmSaleManage.Enabled = tsmReport.Enabled = tsmNewSale.Enabled = false;
+                    tsmSaleManage.Enabled = tsmReport.Enabled = tsmNewSale.Enabled = true;
             }
             catch (Exception ex)
             {
